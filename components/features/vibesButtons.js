@@ -21,33 +21,33 @@ function Play() {
  }
  return (
    <View style={styles.container}>
-     <View style={styles.buttonContainer}>
-     <View style={{ margin: 10}}>
+     <View style={styles.form}>
+      {/* <View style={{ margin: 100}}> */}
 
-      <Animatable.View animation="slideInLeft" iterationCount="infinite" direction="alternate">
-        <TouchableOpacity onPress={startVibration1}>
-          <Text style={styles.button}>1</Text>
-        </TouchableOpacity>
-      </Animatable.View>
+        <Animatable.View animation="slideInLeft" iterationCount="infinite" direction="alternate">
+          <TouchableOpacity onPress={startVibration1}>
+            <Text style={styles.button}>1</Text>
+          </TouchableOpacity>
+        </Animatable.View>
 
-      <Animatable.View animation="slideInDown" iterationCount="infinite" direction="alternate"> 
-        <TouchableOpacity onPress={startVibration2}>
-          <Text style={styles.button}>2</Text>
-        </TouchableOpacity>
-      </Animatable.View>
+        <Animatable.View animation="slideInDown" iterationCount="infinite" direction="alternate"> 
+          <TouchableOpacity onPress={startVibration2}>
+            <Text style={styles.button}>2</Text>
+          </TouchableOpacity>
+        </Animatable.View>
 
-      <Animatable.View animation="slideInRight" iterationCount="infinite" direction="alternate"> 
-        <TouchableOpacity onPress={startVibration3}>
-          <Text style={styles.button}>3</Text>
-        </TouchableOpacity>
-      </Animatable.View>
+        <Animatable.View animation="slideInRight" iterationCount="infinite" direction="alternate"> 
+          <TouchableOpacity onPress={startVibration3}>
+            <Text style={styles.button}>3</Text>
+          </TouchableOpacity>
+        </Animatable.View>
 
-      <Animatable.View animation="slideInUp" iterationCount="infinite" direction="alternate">
-        <TouchableOpacity onPress={startVibration4}>
-          <Text style={styles.button}>4</Text>
-        </TouchableOpacity>
-      </Animatable.View>
-     </View>
+        <Animatable.View animation="slideInUp" iterationCount="infinite" direction="alternate">
+          <TouchableOpacity onPress={startVibration4}>
+            <Text style={styles.button}>4</Text>
+          </TouchableOpacity>
+        </Animatable.View>
+      {/* </View> */}
      </View>
    </View>
  );
@@ -56,13 +56,14 @@ const styles = StyleSheet.create ({
  container: {
    flex: 1,
    justifyContent: 'center',
-   alignItems: 'stretch',
+   alignItems: 'center',
  },
- buttonContainer: {
-   margin: 50,
-   flexDirection: 'row',
-   justifyContent: 'space-around'
- },
+
+ form: {
+  alignItems: 'center',
+  padding: 185,
+},
+
 
   button: {
     lineHeight: 40,
@@ -78,7 +79,7 @@ const styles = StyleSheet.create ({
     borderRadius: 65/2,
     borderWidth: 1,
     overflow: 'hidden',
-  },
-
+  }
 });
+
 export default Play;
