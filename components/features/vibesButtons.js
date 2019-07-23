@@ -1,5 +1,6 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, View, Vibration } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, View, Vibration, Animated } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 function Play() {
  let PATTERN1 = [ 1000, 2000, 3000, 4000, 1000 ];
@@ -22,21 +23,30 @@ function Play() {
    <View style={styles.container}>
      <View style={styles.buttonContainer}>
      <View style={{ margin: 10}}>
-      <TouchableOpacity onPress={startVibration1}>
-        <Text style={styles.button}>1</Text>
-      </TouchableOpacity>
 
-      <TouchableOpacity onPress={startVibration2}>
-        <Text style={styles.button}>2</Text>
-      </TouchableOpacity>
+      <Animatable.View animation="slideInLeft" iterationCount="infinite" direction="alternate" delay={1500}>
+        <TouchableOpacity onPress={startVibration1}>
+          <Text style={styles.button}>1</Text>
+        </TouchableOpacity>
+      </Animatable.View>
 
-      <TouchableOpacity onPress={startVibration3}>
-        <Text style={styles.button}>3</Text>
-      </TouchableOpacity>
+      <Animatable.View animation="slideInDown" iterationCount="infinite" direction="alternate" delay={1500}> 
+        <TouchableOpacity onPress={startVibration2}>
+          <Text style={styles.button}>2</Text>
+        </TouchableOpacity>
+      </Animatable.View>
 
-      <TouchableOpacity onPress={startVibration4}>
-        <Text style={styles.button}>4</Text>
-      </TouchableOpacity>
+      <Animatable.View animation="slideInRight" iterationCount="infinite" direction="alternate" delay={1500}> 
+        <TouchableOpacity onPress={startVibration3}>
+          <Text style={styles.button}>3</Text>
+        </TouchableOpacity>
+      </Animatable.View>
+
+      <Animatable.View animation="slideInUp" iterationCount="infinite" direction="alternate" delay={1500}>
+        <TouchableOpacity onPress={startVibration4}>
+          <Text style={styles.button}>4</Text>
+        </TouchableOpacity>
+      </Animatable.View>
      </View>
      </View>
    </View>
