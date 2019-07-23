@@ -57,5 +57,7 @@
 |       ├──homeScreen.js
 |       ├──vibesScreen.js
 ```
+## UML
+![React Native: Team Vibes](assets/uml.jpg)
 
 # Happy Pressing!!
