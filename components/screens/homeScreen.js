@@ -47,11 +47,19 @@ const styles = StyleSheet.create({
   },
 
   logo: {
+    marginTop: 25,
     marginBottom: 50,
   },
 
   inputField: {
     marginBottom: 25,
+    paddingTop: 7,
+    paddingLeft: 40,
+    paddingRight: 40,
+    paddingBottom: 7,
+    fontSize: 15,
+    borderWidth: 1,
+    borderColor: 'grey',
   },
 
   button: {
@@ -59,7 +67,6 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 20,
     color: 'yellow',
-    borderRadius: 15,
     shadowOffset: { width: 5, height: 5, },
     shadowColor: 'grey',
     shadowOpacity: 0.7,
