@@ -59,6 +59,7 @@ const styles = StyleSheet.create ({
     backgroundColor: 'purple',
     padding: 10,
     fontSize: 20,
+    fontWeight: 'bold',
     textAlign: 'center',
     justifyContent: 'center',
     color: 'yellow',

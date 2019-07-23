@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 175,
-    // backgroundColor: '#dcdcdc',
   },
 
   logo: {
