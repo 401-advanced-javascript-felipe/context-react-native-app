@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Button, StyleSheet, TextInput } from 'react-native';
-import { VibesContext } from './MyContext';
+import { VibesContext } from '../context/vibesContext';
 
 export default class Page1 extends React.Component {
   constructor(props) {

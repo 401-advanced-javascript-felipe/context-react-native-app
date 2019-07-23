@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native';
-import { VibesContext } from './MyContext';
+import { VibesContext } from '../context/vibesContext';
+import Play from '../features/vibesButtons';
 
 export default class Page2 extends React.Component {
   render() {
@@ -11,6 +12,9 @@ export default class Page2 extends React.Component {
             return (
               <View style={styles.container}>
                 <Text>{`Hello ${values.playerName}`}</Text>
+
+                <Play />
+
               </View>
             )
           }
