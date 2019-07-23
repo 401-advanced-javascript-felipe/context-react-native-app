@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Button, StyleSheet, TextInput, Image } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, TextInput, Image } from 'react-native';
 import { VibesContext } from '../context/vibesContext';
 
 export default class Page1 extends React.Component {
@@ -27,7 +27,9 @@ export default class Page1 extends React.Component {
                   values.handleChange('playerName', playerName)
                 }
               />
-              <Button style={styles.play} onPress={this._navigate} title="I want to play a game" />
+              <TouchableOpacity onPress={this._navigate}> 
+                <Text style={styles.button} >I want to play a game</Text>
+              </TouchableOpacity>
             </View>
           );
         }}
@@ -41,6 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 175,
   },
 
   logo: {
@@ -48,11 +51,17 @@ const styles = StyleSheet.create({
   },
 
   inputField: {
-    marginBottom: 50,
+    marginBottom: 25,
   },
 
-  play: {
-    marginBottom: 400,
-    
-  },
+  button: {
+    backgroundColor: 'purple',
+    padding: 10,
+    fontSize: 20,
+    color: 'yellow',
+    borderRadius: 15,
+    shadowOffset: { width: 5, height: 5, },
+    shadowColor: 'grey',
+    shadowOpacity: 0.7,
+  }
 });
