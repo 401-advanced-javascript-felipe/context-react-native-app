@@ -17,19 +17,21 @@ export default class Page1 extends React.Component {
         {values => {
           return (
             <View style={styles.container}>
-              <Image style={styles.logo} source={require('../../assets/vibes.png')}
-              />
-              <TextInput
-                style={styles.inputField}
-                placeholder="Type your name"
-                value={values.playerName}
-                onChangeText={playerName =>
-                  values.handleChange('playerName', playerName)
-                }
-              />
-              <TouchableOpacity onPress={this._navigate}> 
-                <Text style={styles.button} >I want to play a game</Text>
-              </TouchableOpacity>
+              <View style={styles.form}>
+                <Image style={styles.logo} source={require('../../assets/vibes.png')}
+                />
+                <TextInput
+                  style={styles.inputField}
+                  placeholder="Type your name"
+                  value={values.playerName}
+                  onChangeText={playerName =>
+                    values.handleChange('playerName', playerName)
+                  }
+                />
+                <TouchableOpacity onPress={this._navigate}> 
+                  <Text style={styles.button} >I want to play a game</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           );
         }}
@@ -43,12 +45,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#dcdcdc',
+  },
+
+  form: {
+    alignItems: 'center',
     marginBottom: 175,
   },
 
   logo: {
     marginTop: 25,
     marginBottom: 50,
+    shadowOffset: { width: 5, height: 5, },
+    shadowColor: 'grey',
+    shadowOpacity: 0.9,
+
   },
 
   inputField: {
@@ -60,6 +71,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     borderWidth: 1,
     borderColor: 'grey',
+    backgroundColor: '#f5fffa',
   },
 
   button: {
@@ -70,5 +82,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 5, height: 5, },
     shadowColor: 'grey',
     shadowOpacity: 0.7,
+
   }
 });

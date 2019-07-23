@@ -24,25 +24,25 @@ function Play() {
      <View style={styles.buttonContainer}>
      <View style={{ margin: 10}}>
 
-      <Animatable.View animation="slideInLeft" iterationCount="infinite" direction="alternate" delay={1500}>
+      <Animatable.View animation="slideInLeft" iterationCount="infinite" direction="alternate">
         <TouchableOpacity onPress={startVibration1}>
           <Text style={styles.button}>1</Text>
         </TouchableOpacity>
       </Animatable.View>
 
-      <Animatable.View animation="slideInDown" iterationCount="infinite" direction="alternate" delay={1500}> 
+      <Animatable.View animation="slideInDown" iterationCount="infinite" direction="alternate"> 
         <TouchableOpacity onPress={startVibration2}>
           <Text style={styles.button}>2</Text>
         </TouchableOpacity>
       </Animatable.View>
 
-      <Animatable.View animation="slideInRight" iterationCount="infinite" direction="alternate" delay={1500}> 
+      <Animatable.View animation="slideInRight" iterationCount="infinite" direction="alternate"> 
         <TouchableOpacity onPress={startVibration3}>
           <Text style={styles.button}>3</Text>
         </TouchableOpacity>
       </Animatable.View>
 
-      <Animatable.View animation="slideInUp" iterationCount="infinite" direction="alternate" delay={1500}>
+      <Animatable.View animation="slideInUp" iterationCount="infinite" direction="alternate">
         <TouchableOpacity onPress={startVibration4}>
           <Text style={styles.button}>4</Text>
         </TouchableOpacity>
