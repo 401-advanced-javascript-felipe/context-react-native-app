@@ -4,7 +4,7 @@
 This app makes your phone vibrate as you press the buttons that are moving all over the screen.
 
 ## Features 🤩
-It allows the player to add its own name so that they can see it in the main playing screen.
+It allows the player to add their own name so that they can see it in the main playing screen.
 
 ### What's 🆕
 Thank you for playing!!
