@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, StyleSheet, View, Vibration } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, View, Vibration, Animated } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 function Play() {
  let PATTERN1 = [ 1000, 2000, 3000, 4000, 1000 ];
@@ -22,26 +23,30 @@ function Play() {
    <View style={styles.container}>
      <View style={styles.buttonContainer}>
      <View style={{ margin: 10}}>
-       <Button
-         id="1"
-         title="1"
-         onPress={startVibration1}
-         />
-       <Button
-         id="2"
-         title="2"
-         onPress={startVibration2}
-         />
-       <Button
-         id="3"
-         title="3"
-         onPress={startVibration3}
-         />
-       <Button
-         id="4"
-         title="4"
-         onPress={startVibration4}
-         />
+
+      <Animatable.View animation="slideInLeft" iterationCount="infinite" direction="alternate" delay={1500}>
+        <TouchableOpacity onPress={startVibration1}>
+          <Text style={styles.button}>1</Text>
+        </TouchableOpacity>
+      </Animatable.View>
+
+      <Animatable.View animation="slideInDown" iterationCount="infinite" direction="alternate" delay={1500}> 
+        <TouchableOpacity onPress={startVibration2}>
+          <Text style={styles.button}>2</Text>
+        </TouchableOpacity>
+      </Animatable.View>
+
+      <Animatable.View animation="slideInRight" iterationCount="infinite" direction="alternate" delay={1500}> 
+        <TouchableOpacity onPress={startVibration3}>
+          <Text style={styles.button}>3</Text>
+        </TouchableOpacity>
+      </Animatable.View>
+
+      <Animatable.View animation="slideInUp" iterationCount="infinite" direction="alternate" delay={1500}>
+        <TouchableOpacity onPress={startVibration4}>
+          <Text style={styles.button}>4</Text>
+        </TouchableOpacity>
+      </Animatable.View>
      </View>
      </View>
    </View>
@@ -51,11 +56,29 @@ const styles = StyleSheet.create ({
  container: {
    flex: 1,
    justifyContent: 'center',
+   alignItems: 'stretch',
  },
  buttonContainer: {
    margin: 50,
    flexDirection: 'row',
    justifyContent: 'space-around'
- }
+ },
+
+  button: {
+    lineHeight: 40,
+    backgroundColor: 'purple',
+    padding: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    justifyContent: 'center',
+    color: 'yellow',
+    width: 65,
+    height: 65,
+    borderRadius: 65/2,
+    borderWidth: 1,
+    overflow: 'hidden',
+  },
+
 });
 export default Play;
