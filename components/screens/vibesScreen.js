@@ -12,9 +12,7 @@ export default class Page2 extends React.Component {
             return (
               <View style={styles.container}>
                 <Text>{`Hello ${values.playerName}`}</Text>
-
                 <Play />
-
               </View>
             )
           }
