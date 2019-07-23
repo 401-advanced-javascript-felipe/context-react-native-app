@@ -21,17 +21,18 @@
 
 ## In the app
 
-* Type your name in the field and click `Do you want to play a game` button
+* Type your name in the field and click `I want to play a game` button
 * This will navigate you to another page where you can press various buttons that will have different vibration patterns
 
 ## Dependencies
-* React Native
-* React 
-* React Navigation
-* Expo
+* expo
+* react 
+* react-dom
+* react-native
+* react-native-animatable
+* react-native-web
+* react-navigation
 * Babel-preset-expo
-* React-dom
-* React-native-web
 
 
 ## File structure
@@ -59,6 +60,5 @@
 |       ├──homeScreen.js
 |       ├──vibesScreen.js
 ```
-
 
 # Happy Pressing!!
