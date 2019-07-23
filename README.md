@@ -35,7 +35,7 @@
 
 
 ## File structure
-
+```
 ├── package.json
 ├── package-lock.json
 ├── babel.config.json
@@ -58,6 +58,7 @@
 |       ├──AppNavigator.js
 |       ├──homeScreen.js
 |       ├──vibesScreen.js
+```
 
 
 # Happy Pressing!!
