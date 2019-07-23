@@ -11,7 +11,8 @@ export default class Page2 extends React.Component {
          values => {
             return (
               <View style={styles.container}>
-                <Text style={styles.header}>{`Hello,  ${values.playerName}`}</Text>
+                  <Text style={styles.header}>
+                  {`Hello,  ${values.playerName}`}</Text>
                 <Play />
               </View>
             )
@@ -27,6 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#dcdcdc',
   },
 
   header: {
@@ -34,6 +36,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'purple',
     textAlign: 'center',
-
   }
 });
